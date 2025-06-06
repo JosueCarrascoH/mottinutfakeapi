@@ -1,0 +1,105 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "juan@example.com",
+      "password": "password123",
+      "role": "patient",
+      "createdAt": "2024-01-10T12:00:00Z",
+      "updatedAt": "2024-01-15T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "email": "maria@example.com",
+      "password": "password456",
+      "role": "patient",
+      "createdAt": "2024-02-01T09:00:00Z",
+      "updatedAt": null
+    }
+  ],
+  "patients": [
+    {
+      "userId": 1,
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "birthDate": "1990-06-15",
+      "phone": "999888777",
+      "height": 1.75,
+      "weight": 70,
+      "hasMedicalCondition": true,
+      "chronicDisease": "Diabetes tipo 2",
+      "allergies": "Nueces",
+      "dietaryPreferences": "Vegetariano"
+    },
+    {
+      "userId": 2,
+      "firstName": "María",
+      "lastName": "González",
+      "birthDate": "1985-12-05",
+      "phone": "988877766",
+      "height": 1.60,
+      "weight": 60,
+      "hasMedicalCondition": false,
+      "chronicDisease": null,
+      "allergies": "Lácteos",
+      "dietaryPreferences": "Sin gluten"
+    }
+  ],
+  "meals": [
+    {
+      "mealId": 201,
+      "name": "Pechuga de pollo con vegetales",
+      "description": "Pechuga a la plancha con brócoli y zanahoria",
+      "calories": 450,
+      "prepTimeMinutes": 25,
+      "creationDate": "2024-04-30T12:00:00Z"
+    },
+    {
+      "mealId": 202,
+      "name": "Tortilla de espinaca sin gluten",
+      "description": "Huevos, espinaca, aceite de oliva",
+      "calories": 350,
+      "prepTimeMinutes": 10,
+      "creationDate": "2024-04-29T08:30:00Z"
+    }
+  ],
+  "nutritionPlans": [
+    {
+      "planId": 1,
+      "nutritionistUserId": 99,
+      "patientUserId": 1,
+      "medicalRecordId": 101,
+      "energyRequirement": 2000,
+      "creationDate": "2024-05-01T10:00:00Z",
+      "status": "validated"
+    },
+    {
+      "planId": 2,
+      "nutritionistUserId": 99,
+      "patientUserId": 2,
+      "medicalRecordId": 102,
+      "energyRequirement": 1800,
+      "creationDate": "2024-05-02T11:00:00Z",
+      "status": "draft"
+    }
+  ],
+  "planDetails": [
+    {
+      "planDetailId": 1,
+      "nutritionPlanId": 1,
+      "mealType": "lunch",
+      "description": "Almuerzo con proteína magra",
+      "creationDate": "2024-05-01T12:00:00Z",
+      "mealId": 201
+    },
+    {
+      "planDetailId": 2,
+      "nutritionPlanId": 2,
+      "mealType": "breakfast",
+      "description": "Desayuno sin gluten",
+      "creationDate": "2024-05-02T08:30:00Z",
+      "mealId": 202
+    }
+  ]
+}
+
