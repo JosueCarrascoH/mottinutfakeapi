@@ -2,84 +2,134 @@
   "users": [
     {
       "id": 1,
-      "email": "juan@example.com",
-      "password": "password123",
+      "email": "ana.garcia@example.com",
+      "password": "secret123",
       "role": "patient",
-      "createdAt": "2024-01-10T12:00:00Z",
-      "updatedAt": "2024-01-15T12:00:00Z"
+      "createdAt": "2025-06-06T08:54:34.000Z",
+      "updatedAt": null
     },
     {
       "id": 2,
-      "email": "maria@example.com",
-      "password": "password456",
+      "email": "mario.lopez@example.com",
+      "password": "mypass456",
       "role": "patient",
-      "createdAt": "2024-02-01T09:00:00Z",
+      "createdAt": "2025-06-06T08:54:34.000Z",
+      "updatedAt": null
+    },
+    {
+      "id": 3,
+      "email": "dr.nutri@example.com",
+      "password": "nutri789",
+      "role": "nutritionist",
+      "createdAt": "2025-06-06T08:54:34.000Z",
       "updatedAt": null
     }
   ],
   "patients": [
     {
       "userId": 1,
-      "firstName": "Juan",
-      "lastName": "Pérez",
-      "birthDate": "1990-06-15",
-      "phone": "999888777",
-      "height": 1.75,
-      "weight": 70,
+      "firstName": "Ana",
+      "lastName": "Garcia",
+      "birthDate": "1990-05-21",
+      "phone": "999111222",
+      "height": 1.65,
+      "weight": 60.5,
       "hasMedicalCondition": true,
-      "chronicDisease": "Diabetes tipo 2",
-      "allergies": "Nueces",
-      "dietaryPreferences": "Vegetariano"
+      "chronicDisease": "Hipertensión",
+      "allergies": "Lácteos",
+      "dietaryPreferences": "Vegetariana"
     },
     {
       "userId": 2,
-      "firstName": "María",
-      "lastName": "González",
-      "birthDate": "1985-12-05",
-      "phone": "988877766",
-      "height": 1.60,
-      "weight": 60,
+      "firstName": "Mario",
+      "lastName": "Lopez",
+      "birthDate": "1985-03-10",
+      "phone": "999333444",
+      "height": 1.78,
+      "weight": 82.3,
       "hasMedicalCondition": false,
       "chronicDisease": null,
-      "allergies": "Lácteos",
+      "allergies": "Nueces",
       "dietaryPreferences": "Sin gluten"
     }
   ],
   "meals": [
     {
-      "mealId": 201,
-      "name": "Pechuga de pollo con vegetales",
-      "description": "Pechuga a la plancha con brócoli y zanahoria",
-      "calories": 450,
-      "prepTimeMinutes": 25,
-      "creationDate": "2024-04-30T12:00:00Z"
+      "mealId": 1,
+      "name": "Ensalada de Quinoa",
+      "description": "Quinoa con vegetales frescos y aderezo de limón",
+      "calories": 350,
+      "prepTimeMinutes": 20,
+      "creationDate": "2025-06-06T08:54:34.000Z"
     },
     {
-      "mealId": 202,
-      "name": "Tortilla de espinaca sin gluten",
-      "description": "Huevos, espinaca, aceite de oliva",
-      "calories": 350,
-      "prepTimeMinutes": 10,
-      "creationDate": "2024-04-29T08:30:00Z"
+      "mealId": 2,
+      "name": "Pollo a la Plancha",
+      "description": "Pechuga de pollo con especias y vegetales al vapor",
+      "calories": 450,
+      "prepTimeMinutes": 30,
+      "creationDate": "2025-06-06T08:54:34.000Z"
+    }
+  ],
+  "medicalRecords": [
+    {
+      "recordId": 1,
+      "patientUserId": 1,
+      "nutritionistUserId": 3,
+      "appointmentId": 101,
+      "healthcareFacility": "Clínica Salud Total",
+      "serviceDate": "2025-06-01",
+      "residenceLocation": "Lima",
+      "familyNucleus": "Padres y 2 hermanos",
+      "occupation": "Ingeniera",
+      "educationLevel": "Universitaria",
+      "maritalStatus": "Soltera",
+      "religion": "Católica",
+      "idNumber": "12345678",
+      "previousDiagnosis": "Ninguno",
+      "illnessDuration": "N/A",
+      "recentDiagnosis": "Hipertensión",
+      "familyHistory": "Padre con hipertensión",
+      "creationDate": "2025-06-01T08:54:34.000Z"
+    },
+    {
+      "recordId": 2,
+      "patientUserId": 2,
+      "nutritionistUserId": 3,
+      "appointmentId": 102,
+      "healthcareFacility": "Centro Médico Bienestar",
+      "serviceDate": "2025-06-02",
+      "residenceLocation": "Callao",
+      "familyNucleus": "Esposa e hijo",
+      "occupation": "Profesor",
+      "educationLevel": "Maestría",
+      "maritalStatus": "Casado",
+      "religion": "Agnóstico",
+      "idNumber": "87654321",
+      "previousDiagnosis": "Alergia a nueces",
+      "illnessDuration": "Desde infancia",
+      "recentDiagnosis": "Ninguno",
+      "familyHistory": "Madre con diabetes",
+      "creationDate": "2025-06-02T08:54:34.000Z"
     }
   ],
   "nutritionPlans": [
     {
       "planId": 1,
-      "nutritionistUserId": 99,
+      "nutritionistUserId": 3,
       "patientUserId": 1,
-      "medicalRecordId": 101,
+      "medicalRecordId": 1,
       "energyRequirement": 2000,
-      "creationDate": "2024-05-01T10:00:00Z",
+      "creationDate": "2025-06-03T08:54:34.000Z",
       "status": "validated"
     },
     {
       "planId": 2,
-      "nutritionistUserId": 99,
+      "nutritionistUserId": 3,
       "patientUserId": 2,
-      "medicalRecordId": 102,
+      "medicalRecordId": 2,
       "energyRequirement": 1800,
-      "creationDate": "2024-05-02T11:00:00Z",
+      "creationDate": "2025-06-04T08:54:34.000Z",
       "status": "draft"
     }
   ],
@@ -88,17 +138,17 @@
       "planDetailId": 1,
       "nutritionPlanId": 1,
       "mealType": "lunch",
-      "description": "Almuerzo con proteína magra",
-      "creationDate": "2024-05-01T12:00:00Z",
-      "mealId": 201
+      "description": "Almuerzo balanceado con proteínas y vegetales",
+      "creationDate": "2025-06-03T08:54:34.000Z",
+      "mealId": 1
     },
     {
       "planDetailId": 2,
       "nutritionPlanId": 2,
-      "mealType": "breakfast",
-      "description": "Desayuno sin gluten",
-      "creationDate": "2024-05-02T08:30:00Z",
-      "mealId": 202
+      "mealType": "dinner",
+      "description": "Cena ligera con proteínas magras",
+      "creationDate": "2025-06-04T08:54:34.000Z",
+      "mealId": 2
     }
   ]
 }
